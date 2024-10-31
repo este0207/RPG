@@ -4,48 +4,36 @@
 #include <unistd.h>
 #include <time.h>
 
-int screen(char choix[255]) {
-    int a;
-    printf("1) Bonjour\n");
-    printf("2) Charger\n");
-    printf("0) Quitter\n");
-    printf("|----------------------------------|\n");
-
-    fgets(choix, 255, stdin);
-    a = atoi(choix);
-    return a;
+int nom(char ligne[255], char name[255]) {
+    FILE*  file = fopen("questions.txt", "r+");
+    fgets(ligne, 255, file);
+    printf("%s", ligne);
+    fgets(name, 255, stdin);
+    fgets(file, "%s", strtok_r(name, ",", &name));
+    fclose(file);
+    return 0;
 }
-
-struct player {
-
-    int pv;
-    int endurance;
-    char name[20];
-};
 
 
 int main() {
-    char choix[255];
+    char ligne[255];
+    char name[255];
     int a = 0;
     int b = 0;
-    int reponce1 = 0;
-    int reponce2 = 0;
-    int reponce3 = 0;
+    char buff[1000];
 
     system("clear");
 
-    printf("|----------------------------------|\n");
-    printf("|-------------RPG Texutel----------|\n");
+    FILE*  file = fopen("histoire.txt", "r");
 
-    a = screen(choix);
+    // while (fgets(buff, 1000, file) != NULL) {
+    //     buff[strlen(buff) - 1] = '\0';
+    //     printf("%s", buff);
+    //     getchar();
+    // }
 
-    while (1) {
-        system("clear");
-        printf("|----------------------------------|\n");
-        printf("|-------------RPG Texutel----------|\n");
-
-        
-    }
+    fclose(file);
+    nom( ligne , name);
 
     return 0;
 }
