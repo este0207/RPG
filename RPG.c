@@ -6,7 +6,7 @@
 
 int screen(char choix[255]) {
     int a;
-    printf("1) Jouer\n");
+    printf("1) Bonjour\n");
     printf("2) Charger\n");
     printf("0) Quitter\n");
     printf("|----------------------------------|\n");
