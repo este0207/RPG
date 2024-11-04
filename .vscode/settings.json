@@ -2,6 +2,9 @@
     "files.associations": {
         "typeinfo": "c",
         "chrono": "c",
-        "text_encoding": "c"
+        "text_encoding": "c",
+        "time.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c"
     }
 }

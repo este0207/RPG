@@ -1,0 +1,18 @@
+Il est temps de choisir votre Maison :
+
+-1 Grifondor           -2 Serpentard           -3 Serdaigle            -4 Poufsoufle
+
+Chaque maison a sa particularitée et ses points de compétences unique qui influeront sur la suite de l'histoire.
+
+Entrez "a" pour voir les caractéristiques de chaque Maison.
+Entrez "b" pour choisir ta maison.
+!
+Entrez votre choix :
+
+-1 Grifondor           -2 Serpentard           -3 Serdaigle            -4 Poufsoufle
+
+
+!
+Choipeau : "hmmmm... intéressant..."
+Choipeau : "Pour toi..."
+Choipeau : "Ce sera 

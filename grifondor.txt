@@ -1,0 +1,1 @@
+Attaque : 10 Defense : 0 Mana : 20 PV : 100
