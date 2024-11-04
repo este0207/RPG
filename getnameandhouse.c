@@ -13,6 +13,7 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
         printf("Entrez votre nom (20 caractères max) :\n");
         int i=0;
         while(i==0){
+        printf("->");
         fgets(name,20,stdin);
         name[strlen(name)-1]=0;
         if (strlen(name)>20)
@@ -68,6 +69,7 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
             }
         }
 
+        printf("->");
         fgets(maison,40,stdin);
         maison[strlen(maison)-1]=0;
         if (strcmp(maison,"a")==0)
@@ -83,6 +85,7 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
                     printf("%s",ligne);
                 }
                 printf("\n");
+                printf("->");
                 fgets(maison,40,stdin);
                 maison[strlen(maison)-1]=0;
                 if (strcmp(maison,"q")==0)
@@ -96,9 +99,10 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
                     j++;
                     // printf("%d",k);
                 }
-                else(
-                    printf("Veuillez entrer un choix valide\n")
-                );
+                else{
+                    printf("Veuillez entrer un choix valide. Taper sur ENTER et resaisissez votre choix\n");
+                    getchar();
+                };
                 fclose(fichiermaisons);
             }
         }  
@@ -131,6 +135,7 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
     i=0;
     while (i==0)
     {
+        printf("->");
         fgets(maison,40,stdin);
         maison[strlen(maison)-1]=0;
         
