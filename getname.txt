@@ -2,10 +2,4 @@ Prof : "Tu est nouveaux mon garcon, quelle est ton  nom ?"
 Vous : " Je m'appelle ,
 McGonagall : "Bienvenue ,
 je suis le professeur McGonagall, vient avec moi , nous allons choisir ta futur maison."
-
-
-Vous mettez le choipeau sur votre tete et vous dit que vous etes :
-- 1
-- 2
-- 3
-- 4
+Vous mettez le Choipeau sur votre tete. Il réfléchit quelques secondes et vous annonce votre maison :
