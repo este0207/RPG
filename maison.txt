@@ -1,32 +1,30 @@
 Grifondor :
 
-ffeqfqefqef
-eq
-ffeqfqefqeff
-qef
-qef
+Attaque : 10 
+Defense : 0 
+Mana : 20 
+PV : 100
 
 Serdaigle :
-faissdfs
-faisfg
-Serdaigleesg
-Serdaigleesgs
+
+Attaque : 10 
+Defense : 0 
+Mana : 0 
+PV : 120
 
 Poufsoufle :
-faisf
-safq
-gqe
-gsr
-sr
-Hagriddjd
+
+Attaque : 10 
+Defense : 20 
+Mana : 0 
+PV : 100
 
 Serpentard :
-srgsgsdf
-qd
-faissdfsgdsgs
-dg
-Serdaigleesggsdgdsf
-destiné
+
+Attaque : 20 
+Defense : 0 
+Mana : 0 
+PV : 100
 
 Entrez q pour revenir au choix.
 Entrez b pour choisir ta maison.

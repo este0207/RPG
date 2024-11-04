@@ -19,25 +19,25 @@ t_perso attribution(char name[20],char maison[40]){
     strcpy(persoprincipal.maison,maison);
     if (strcmp(persoprincipal.maison,"Grifondor")==0)
     {
-        FILE * grifondor=fopen("grifondor.txt","r");
+        FILE * grifondor=fopen("./maisons/grifondor.txt","r");
         fscanf(grifondor,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(grifondor);
     }
     else if (strcmp(persoprincipal.maison,"Serpentard")==0)
     {
-        FILE * serpentard=fopen("serpentard.txt","r");
+        FILE * serpentard=fopen("./maisons/serpentard.txt","r");
         fscanf(serpentard,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(serpentard);
     }
     else if (strcmp(persoprincipal.maison,"Serdaigle")==0)
     {
-        FILE * serdaigle=fopen("serdaigle.txt","r");
+        FILE * serdaigle=fopen("./maisons/serdaigle.txt","r");
         fscanf(serdaigle,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(serdaigle);
     }
     else if (strcmp(persoprincipal.maison,"Poufsoufle")==0)
     {
-        FILE * poufsoufle=fopen("poufsoufle.txt","r");
+        FILE * poufsoufle=fopen("./maisons/poufsoufle.txt","r");
         fscanf(poufsoufle,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(poufsoufle);
     }
