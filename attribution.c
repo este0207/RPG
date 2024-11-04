@@ -12,7 +12,7 @@ typedef struct perso
     int pv;
 }t_perso;
 
-int attribution(char name[20],char maison[40]){
+t_perso attribution(char name[20],char maison[40]){
     
     t_perso persoprincipal;
     strcpy(persoprincipal.nom,name);
@@ -20,27 +20,27 @@ int attribution(char name[20],char maison[40]){
     if (strcmp(persoprincipal.maison,"Grifondor")==0)
     {
         FILE * grifondor=fopen("grifondor.txt","r");
-        fscanf("%d%d%d%d",persoprincipal.attaque,persoprincipal.defense,persoprincipal.magie,persoprincipal.pv);
+        fscanf(grifondor,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(grifondor);
     }
     else if (strcmp(persoprincipal.maison,"Serpentard")==0)
     {
         FILE * serpentard=fopen("serpentard.txt","r");
-        fscanf("%d%d%d%d",persoprincipal.attaque,persoprincipal.defense,persoprincipal.magie,persoprincipal.pv);
+        fscanf(serpentard,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(serpentard);
     }
     else if (strcmp(persoprincipal.maison,"Serdaigle")==0)
     {
         FILE * serdaigle=fopen("serdaigle.txt","r");
-        fscanf("%d%d%d%d",persoprincipal.attaque,persoprincipal.defense,persoprincipal.magie,persoprincipal.pv);
+        fscanf(serdaigle,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(serdaigle);
     }
     else if (strcmp(persoprincipal.maison,"Poufsoufle")==0)
     {
         FILE * poufsoufle=fopen("poufsoufle.txt","r");
-        fscanf("%d%d%d%d",persoprincipal.attaque,persoprincipal.defense,persoprincipal.magie,persoprincipal.pv);
+        fscanf(poufsoufle,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(poufsoufle);
     }
     
-
+    return persoprincipal;
 }

@@ -134,31 +134,31 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
         fgets(maison,40,stdin);
         maison[strlen(maison)-1]=0;
         
-        if ( strcmp(maison,"1")!=0 && strcmp(maison,"2")!=0 && strcmp(maison,"3")!=0 && strcmp(maison,"4")!=0 && strcmp(maison,"Grifondor")!=0 && strcmp(maison,"Serpentard")!=0 && strcmp(maison,"Serdaigle")!=0 && strcmp(maison,"Poufsoufle")!=0)
+        if ( strcmp(maison,"1")!=0 && strcmp(maison,"2")!=0 && strcmp(maison,"3")!=0 && strcmp(maison,"4")!=0 && strcmp(maison,"Grifondor")!=0 && strcmp(maison,"Serpentard")!=0 && strcmp(maison,"Serdaigle")!=0 && strcmp(maison,"Poufsoufle")!=0 && strcmp(maison,"grifondor")!=0 && strcmp(maison,"serpentard")!=0 && strcmp(maison,"serdaigle")!=0 && strcmp(maison,"poufsoufle")!=0)
         {
             printf("Veuillez entrer une reponse valide\n");
         }
         else(
             i++);
     }
-    if (strcmp(maison,"1")==0)
+
+    if (strcmp(maison,"1")==0 || strcmp(maison,"grifondor"))
     {
         memset(maison,0,40);
         strcpy(maison,"Grifondor");
     }
-    else if (strcmp(maison,"2")==0)
+    else if (strcmp(maison,"2")==0 || strcmp(maison,"serpentard"))
     {
         strcpy(maison,"Serpentard");
     }
-    else if (strcmp(maison,"3")==0)
+    else if (strcmp(maison,"3")==0 || strcmp(maison,"serdaigle"))
     {
         strcpy(maison,"Serdaigle");
     }
-    else if (strcmp(maison,"4")==0)
+    else if (strcmp(maison,"4")==0 || strcmp(maison,"poufsoufle"))
     {
         strcpy(maison,"Poufsoufle");
     }
-    
     
     while (fgets(ligne,1000,getmaison)!=NULL)
     {
@@ -166,7 +166,6 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
         sleep(1.2);
     }
 
-    // sleep(1);
     printf("%s !\"\n",maison);
 
     fclose(getmaison);

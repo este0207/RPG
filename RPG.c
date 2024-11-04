@@ -15,12 +15,11 @@ int main() {
     char house[40];
     int a = 0;
     int b = 0;
-    // char buff[1000];
 
     intro(ligne);
     getnameandhouse(ligne,name,house);
-    attribution(name,house);
-
+    t_perso persoprincipal = attribution(name,house);
+    printf("%d",persoprincipal.pv);
     return 0;
 }
 
