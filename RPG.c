@@ -18,10 +18,10 @@ int main() {
     int b = 0;
 
 
-    intro(ligne);
+    // intro(ligne);
     getnameandhouse(ligne,name,house);
     t_perso persoprincipal = attribution(name,house);
-    intro2(ligne);
+    // intro2(ligne);
     combat(&persoprincipal);
     return 0;
 }
