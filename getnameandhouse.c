@@ -147,20 +147,20 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
             i++);
     }
 
-    if (strcmp(maison,"1")==0 || strcmp(maison,"grifondor"))
+    if (strcmp(maison,"1")==0 || strcmp(maison,"grifondor")==0)
     {
         memset(maison,0,40);
         strcpy(maison,"Grifondor");
     }
-    else if (strcmp(maison,"2")==0 || strcmp(maison,"serpentard"))
+    else if (strcmp(maison,"2")==0 || strcmp(maison,"serpentard")==0)
     {
         strcpy(maison,"Serpentard");
     }
-    else if (strcmp(maison,"3")==0 || strcmp(maison,"serdaigle"))
+    else if (strcmp(maison,"3")==0 || strcmp(maison,"serdaigle")==0)
     {
         strcpy(maison,"Serdaigle");
     }
-    else if (strcmp(maison,"4")==0 || strcmp(maison,"poufsoufle"))
+    else if (strcmp(maison,"4")==0 || strcmp(maison,"poufsoufle")==0)
     {
         strcpy(maison,"Poufsoufle");
     }
@@ -168,10 +168,11 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
     while (fgets(ligne,1000,getmaison)!=NULL)
     {
         printf("%s",ligne);
-        sleep(1.2);
+        usleep(1200000);
     }
 
     printf("%s !\"\n",maison);
+    sleep(3);
 
     fclose(getmaison);
     return 0;

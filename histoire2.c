@@ -14,4 +14,6 @@ system("clear");
     }
 
     fclose(file);
+    return 0;
 }
+

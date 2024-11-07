@@ -6,8 +6,9 @@
 
 #include "getnameandhouse.c"
 #include "histoire.c"
+#include "histoire2.c"
 #include "attribution.c"
-
+#include "combat.c"
 
 int main() {
     char ligne[1000];
@@ -16,10 +17,12 @@ int main() {
     int a = 0;
     int b = 0;
 
+
     intro(ligne);
     getnameandhouse(ligne,name,house);
     t_perso persoprincipal = attribution(name,house);
-    printf("%d",persoprincipal.pv);
+    intro2(ligne);
+    combat(&persoprincipal);
     return 0;
 }
 
