@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-int combat(t_perso* persoprincipal) {
+void combat(t_perso* persoprincipal) {
     char ligne[1000];
     int a = 0;
     char choix2[3];
@@ -76,7 +76,7 @@ int combat(t_perso* persoprincipal) {
 
         if (persoprincipal->pv <= 0){
             printf("vous avez perdu\n");
-            return 1;
+            return 0;
         }
         if (troll.pv <= 0){
             printf("vous avez gagner\n");
