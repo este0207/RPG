@@ -46,7 +46,8 @@ int combat(t_perso* persoprincipal) {
                 break;
             default:
                 printf("Vous avez choisi une attaque invalide\n");
-                return 1;
+                continue;
+                break;
             }
         int attaque_aleatoire = (rand() % 3) + 1;
 
