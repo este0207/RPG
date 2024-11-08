@@ -4,10 +4,18 @@
 #include <unistd.h>
 #include <time.h>
 
-#include "getnameandhouse.c"
-#include "histoire.c"
-#include "attribution.c"
 
+#include "global.h"
+
+// typedef struct perso 
+// {
+//     char nom [20];
+//     char maison[40];
+//     int attaque;
+//     int defense;
+//     int magie;
+//     int pv;
+// }t_perso;
 
 int main() {
     char ligne[1000];
@@ -16,10 +24,13 @@ int main() {
     int a = 0;
     int b = 0;
 
-    intro(ligne);
-    getnameandhouse(ligne,name,house);
-    t_perso persoprincipal = attribution(name,house);
-    printf("%d",persoprincipal.pv);
+    // intro(ligne);
+    // getnameandhouse(ligne,name,house);
+    // t_perso persoprincipal = attribution(name,house);
+
+    // quete2(house);
+    anas();
+
     return 0;
 }
 

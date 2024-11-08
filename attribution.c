@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 typedef struct perso 
 {
     char nom [20];
@@ -13,7 +14,6 @@ typedef struct perso
 }t_perso;
 
 t_perso attribution(char name[20],char maison[40]){
-    
     t_perso persoprincipal;
     strcpy(persoprincipal.nom,name);
     strcpy(persoprincipal.maison,maison);
