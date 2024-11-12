@@ -6,6 +6,7 @@
 
 #define BUF_SIZE 255
 
+
 void lireLignes(char *nomFichier, int debut, int fin) {
     FILE *fichier = fopen(nomFichier, "r");  // Ouvrir le fichier en mode lecture
     if (fichier == NULL) {
@@ -30,14 +31,17 @@ void lireLignes(char *nomFichier, int debut, int fin) {
     fclose(fichier);  // Ferme le fichier
 }
 
-
-int main() {
+int postfight(t_perso* persoprincipal) {
     char ligne[1000];
     int a = 0;
     char choix2[10];
     char *nomFichier = "histoire3.txt";  // Nom du fichier à lire
     int ligneDebut = 0;
     int ligneFin = 0;
+
+    t_perso Drago;
+    Drago.attaque = 10;
+    Drago.pv = 270;
     
         system("clear");
 
@@ -64,16 +68,19 @@ int main() {
             fgets(choix2, sizeof(choix2), stdin);
             choix2[strlen(choix2)-1] = 0;
             if (strcmp(choix2, "1") == 0 || strcasecmp(choix2, "oui") == 0) {
-
                 int i = 18;
-                while (i < 20)
+                while (i < 21)
                 {
                     lireLignes(nomFichier, i, i);
                     getchar();
                     i++;
                 }
+                persoprincipal->pv = 150;
+                persoprincipal->defense = 50;
+                printf("PV : %d    Shield : %d", persoprincipal->pv, persoprincipal->defense);
+                getchar();
                 system("clear");
-                lireLignes(nomFichier, 21, 26);
+                lireLignes(nomFichier, 23, 28);
 
                 printf("-> ");
                 fgets(choix2, sizeof(choix2), stdin);
@@ -83,9 +90,15 @@ int main() {
                 switch (a)
                 {
                 case 1:
-                    lireLignes(nomFichier, 27, 28);
+                    system("clear");
+                    lireLignes(nomFichier, 30, 30);
+                    printf(" %s :          Drago :\n vie : %d          vie : %d\n attaque : %d\n defense : %d\n mana : %d\n\n", persoprincipal->nom, persoprincipal->pv,Drago.pv, persoprincipal->attaque, persoprincipal->defense, persoprincipal->magie);
+
                     break;
                 case 2:
+                    lireLignes(nomFichier, 29, 30);
+                    break;
+                case 3:
                     lireLignes(nomFichier, 29, 30);
                     break;
                 
@@ -96,35 +109,25 @@ int main() {
             } 
             else if (strcmp(choix2, "2") == 0 || strcasecmp(choix2, "non") == 0) {
 
-                lireLignes(nomFichier, 20, 20);
+                lireLignes(nomFichier, 35, 36);
                 getchar();
             }
 
             break;
-        // case 2:
-        //     fichier = fopen("histoire3.txt", "r");
-        //     for (int i = 10; i < 11; i++)
-        //     {
-        //         lireLignes(fichier, i, i);
-        //         printf("%s", ligne);
-        //     }
-        //     fclose(fichier);
-        //     break;
-        // case 3:
-        //     fichier = fopen("histoire3.txt", "r");
-        //     for (int i = 11; i < 12; i++)
-        //     {
-        //         lireLignes(fichier, i, i);
-        //         printf("%s", ligne);
-        //     }
-        //     fclose(fichier);
-        //     break;
+        case 2:
+            lireLignes(nomFichier, 38, 42);
+            persoprincipal->magie = 100;
+            sleep(300);
+            lireLignes(nomFichier, 43, 43);
+            break;
+        case 3:
+
+            break;
         
         default:
+            lireLignes(nomFichier, 42, 43);
             break;
         }
 
     return 0;
 }
-
-

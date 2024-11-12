@@ -22,9 +22,9 @@ int main() {
     // intro(ligne);
     getnameandhouse(ligne,name,house);
     t_perso persoprincipal = attribution(name,house);
-    // intro2(ligne);
-    combat(&persoprincipal);
-    postfight(ligne,&persoprincipal);
+    // // intro2(ligne);
+    // combat(&persoprincipal);
+    postfight(&persoprincipal);
 
     return 0;
 }
