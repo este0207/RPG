@@ -9,6 +9,7 @@
 #include "histoire2.c"
 #include "attribution.c"
 #include "combat.c"
+#include "post-fight.c"
 
 int main() {
     char ligne[1000];
@@ -18,11 +19,13 @@ int main() {
     int b = 0;
 
 
-    intro(ligne);
+    // intro(ligne);
     getnameandhouse(ligne,name,house);
     t_perso persoprincipal = attribution(name,house);
-    intro2(ligne);
+    // intro2(ligne);
     combat(&persoprincipal);
+    postfight(ligne,&persoprincipal);
+
     return 0;
 }
 

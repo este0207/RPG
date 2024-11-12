@@ -32,6 +32,15 @@ void combat(t_perso* persoprincipal) {
 
         printf("\n");
         
+        if (persoprincipal->pv <= 0){
+            printf("vous avez perdu\n");
+            
+        }
+        if (troll.pv <= 0){
+            printf("vous avez gagner\n");
+            
+        }
+        
         switch (a)
             {
             case 1:
@@ -50,6 +59,7 @@ void combat(t_perso* persoprincipal) {
                 break;
             }
         int attaque_aleatoire = (rand() % 3) + 1;
+
 
         sleep(2);
         printf("\n");
@@ -74,15 +84,6 @@ void combat(t_perso* persoprincipal) {
 
         sleep(2);
 
-        if (persoprincipal->pv <= 0){
-            printf("vous avez perdu\n");
-            return 0;
-        }
-        if (troll.pv <= 0){
-            printf("vous avez gagner\n");
-            return 0;
-        }
     }
-    return 0;
 }
 
