@@ -217,9 +217,11 @@ int quete2(char reponse[40]){
             if (random<fichierchancefloat)
             {
                 printf("Réussi !\n");
-                // char path[255];memset(path,0,255);
-                // sprintf(path,"quete%d/reponse%s/reussite",2,reponse);
-                FILE * chance=fopen("quete2/reponse2/reussite","r");
+                
+                char path[255];memset(path,0,255);
+                sprintf(path,"quete%d/reponse%s/reussite",2,reponse);
+
+                FILE * chance=fopen(path,"r");
                 while (fgets(ligne,1000,chance)!=NULL)
                 {
                     printf("%s",ligne);
