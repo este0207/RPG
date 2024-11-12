@@ -8,7 +8,7 @@
 
 void quete2(char reponse[40]){
     char ligne[1000];
-    FILE * quete2=fopen("quete2.txt","r");
+    FILE * quete2=fopen("quete_quiditch.txt","r");
     fread(ligne,1,sizeof(ligne),quete2);
     char* intro = strtok(ligne,"#");
     char* bloc;

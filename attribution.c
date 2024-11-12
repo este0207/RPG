@@ -13,6 +13,19 @@ typedef struct perso
     int pv;
 }t_perso;
 
+void save_player(t_perso player){
+    FILE* fd = fopen("player","wb");
+    fwrite(&player,sizeof(t_perso),1,fd);
+    return;
+}
+
+t_perso get_player(){
+    FILE* fd = fopen("player","rb");
+    t_perso player;
+    fread(&player,sizeof(t_perso),1,fd);
+    return player;
+}
+
 t_perso attribution(char name[20],char maison[40]){
     t_perso persoprincipal;
     strcpy(persoprincipal.nom,name);

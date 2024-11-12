@@ -11,13 +11,13 @@ int pertedeballe(float random){
     char ligne[1000];
     char chance_buf[10];memset(chance_buf,0,10);
 
-    FILE* chanceadverse=fopen("quete2/pertedeballechance","r");
+    FILE* chanceadverse=fopen("quete_quiditch/pertedeballechance","r");
     fgets(chance_buf,10,chanceadverse);
     chance=atof(chance_buf);
 
     if (random>chance)
     {
-        FILE * pertedeballe=fopen("quete2/pertedeballepasbut","r");
+        FILE * pertedeballe=fopen("quete_quiditch/pertedeballepasbut","r");
         while(fgets(ligne,1000,pertedeballe)!=NULL){
             ligne[strlen(ligne)-1]=0;
             printf("%s",ligne);
@@ -29,7 +29,7 @@ int pertedeballe(float random){
     }
     else
     {
-        FILE * pertedeballe=fopen("quete2/pertedeballebut","r");
+        FILE * pertedeballe=fopen("quete_quiditch/pertedeballebut","r");
         while(fgets(ligne,1000,pertedeballe)!=NULL){
             ligne[strlen(ligne)-1]=0;
             printf("%s",ligne);
