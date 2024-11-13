@@ -5,6 +5,7 @@ Vous allez ou :
 1) Dans la cour
 2) Dans la salle de cours (5min)
 3) Vous retournez dans les toilette 
+4) Voir les stats
 [----------------------------]
 !
 Vous rentrez dans la cour;
@@ -29,7 +30,7 @@ Vous allez cherchez Drago Malefoy dans :
 
 Vous arrivez dans la forêt, Drago Malefoy vous attend de pied ferme.
 
-
+1) Expectro Patronum(30 mana)      2) Wingardium Leviosa(20 mana)      3) Coups fort (20)
 
 
 Vous : Désoler j'ai plus important a faire 
@@ -45,3 +46,5 @@ Apprentissage Fini
 Vous retournez dans les toilette mais ca va pas ou quoi;
 Le garde vous vire des toilette et vous jette dehors.
 
+
+Vous Vous rendez dans la chambre de Drago Malefoy,

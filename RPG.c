@@ -19,11 +19,11 @@ int main() {
     int b = 0;
 
 
-    // intro(ligne);
+    intro(ligne);
     getnameandhouse(ligne,name,house);
     t_perso persoprincipal = attribution(name,house);
-    // // intro2(ligne);
-    // combat(&persoprincipal);
+    intro2(ligne);
+    combat(&persoprincipal);
     postfight(&persoprincipal);
 
     return 0;
