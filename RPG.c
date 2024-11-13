@@ -4,8 +4,8 @@
 #include <unistd.h>
 #include <time.h>
 
-
 #include "global.h"
+
 
 int main() {
     char ligne[1000];
@@ -13,6 +13,7 @@ int main() {
     char house[40];
     int a = 0;
     int b = 0;
+
     t_perso persoprincipal; 
     menudebut(&persoprincipal);
     intro(ligne);
@@ -21,6 +22,14 @@ int main() {
     quete2(house);
     
     
+
+
+
+  
+    intro2(ligne);
+    combat(&persoprincipal);
+    postfight(&persoprincipal);
+
 
     return 0;
 }
