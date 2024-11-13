@@ -175,5 +175,7 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
 
     fclose(getmaison);
     getchar();
+    
     return 0;
+    
 }

@@ -13,11 +13,13 @@ int main() {
     char house[40];
     int a = 0;
     int b = 0;
-
+    t_perso persoprincipal; 
+    menudebut(&persoprincipal);
     intro(ligne);
     getnameandhouse(ligne,name,house);
-    t_perso persoprincipal = attribution(name,house);
+    persoprincipal = attribution(name,house);
     quete2(house);
+    
     
 
     return 0;
