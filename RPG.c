@@ -4,12 +4,8 @@
 #include <unistd.h>
 #include <time.h>
 
-#include "getnameandhouse.c"
-#include "histoire.c"
-#include "histoire2.c"
-#include "attribution.c"
-#include "combat.c"
-#include "post-fight.c"
+#include "global.h"
+
 
 int main() {
     char ligne[1000];
@@ -18,13 +14,22 @@ int main() {
     int a = 0;
     int b = 0;
 
-
-    // intro(ligne);
+    t_perso persoprincipal; 
+    menudebut(&persoprincipal);
+    intro(ligne);
     getnameandhouse(ligne,name,house);
-    t_perso persoprincipal = attribution(name,house);
-    // // intro2(ligne);
-    // combat(&persoprincipal);
+    persoprincipal = attribution(name,house);
+    quete2(house);
+    
+    
+
+
+
+  
+    intro2(ligne);
+    combat(&persoprincipal);
     postfight(&persoprincipal);
+
 
     return 0;
 }

@@ -169,6 +169,7 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
             i++);
     }
 
+
     // Convertit le nom de la maison en majuscules
     if (strcmp(maison,"1")==0 || strcmp(maison,"grifondor")==0)
     {
@@ -202,7 +203,12 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
 
     // Ferme le fichier
     fclose(getmaison);
+    getchar();
+    
+
     // Retourne 0
+
     return 0;
+    
 }
 
