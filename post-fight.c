@@ -7,6 +7,8 @@
 #define BUF_SIZE 255
 
 
+
+
 void lireLignes(char *nomFichier, int debut, int fin) {
     FILE *fichier = fopen(nomFichier, "r");  // Ouvrir le fichier en mode lecture
     if (fichier == NULL) {
@@ -51,9 +53,10 @@ int postfight(t_perso* persoprincipal) {
     // 2) Dans la salle de cours (5min)
     // 3) Vous retournez dans les toilette 
     // 4) Voir les stats
+    // 5) Jouer au quidiche
     // [----------------------------]
         FILE *fichier = fopen(nomFichier, "r");
-        for (int i = 0; i < 9 && fgets(ligne, sizeof(ligne), fichier) != NULL; i++) {
+        for (int i = 0; i < 10 && fgets(ligne, sizeof(ligne), fichier) != NULL; i++) {
             printf("%s", ligne);
         }
         fclose(fichier);
@@ -70,13 +73,13 @@ int postfight(t_perso* persoprincipal) {
         switch (a)
         {
         case 1:  // 1) Dans la cour
-            lireLignes(nomFichier, 11, 18);
+            lireLignes(nomFichier, 12, 19);
             printf("-> ");
             fgets(choix2, sizeof(choix2), stdin);
             choix2[strlen(choix2)-1] = 0;
             if (strcmp(choix2, "1") == 0 || strcasecmp(choix2, "oui") == 0) {
-                int i = 19;
-                while (i < 22)
+                int i = 20;
+                while (i < 23)
                 {
                     lireLignes(nomFichier, i, i);
                     getchar();
@@ -92,7 +95,7 @@ int postfight(t_perso* persoprincipal) {
                 // 2) Dans sa chambre
                 // 3) Dans la salle mystère
                 // [----------------------------]
-                lireLignes(nomFichier, 24, 29);
+                lireLignes(nomFichier, 25, 30);
 
                 printf("-> ");
                 fgets(choix2, sizeof(choix2), stdin);
@@ -118,9 +121,9 @@ int postfight(t_perso* persoprincipal) {
                     }
 
                     system("clear");
-                    lireLignes(nomFichier, 31, 31);
+                    lireLignes(nomFichier, 32, 32);
                     printf(" %s :          Drago :\n vie : %d          vie : %d\n attaque : %d\n defense : %d\n mana : %d\n\n", persoprincipal->nom, persoprincipal->pv,Drago.pv, persoprincipal->attaque, persoprincipal->defense, persoprincipal->magie);
-                    lireLignes(nomFichier, 33, 33);
+                    lireLignes(nomFichier, 34, 34);
 
                     fgets(choix2, sizeof(choix2), stdin);
                     choix2[strlen(choix2)-1] = 0;
@@ -130,16 +133,16 @@ int postfight(t_perso* persoprincipal) {
                     switch (a)
                     {
                     case 1:   // 1) Expectro Patronum(30) 
-                        lireLignes(nomFichier, 34, 35);
+                        lireLignes(nomFichier, 35, 36);
                         persoprincipal->magie = persoprincipal->magie - 30;
                         break;
                     case 2:   // 2) Wingardium Leviosa(20)
-                        lireLignes(nomFichier, 36, 37);
+                        lireLignes(nomFichier, 37, 38);
                         persoprincipal->magie = persoprincipal->magie - 20;
                         Drago.pv -= persoprincipal->attaque; // Drago vie --
                         break;
                     case 3:   // 3) Coup fort
-                        lireLignes(nomFichier, 38, 39);
+                        lireLignes(nomFichier, 39, 40);
                         persoprincipal->magie = persoprincipal->magie + 10;
                         Drago.pv -= persoprincipal->attaque; // Drago vie --
                         continue;
@@ -157,7 +160,7 @@ int postfight(t_perso* persoprincipal) {
                         {
                         case 1:
                             printf("le boss fais une attack normale\n");
-                            persoprincipal->pv -= Drago.attaque; // perso vie --
+                           persoprincipal->pv -= Drago.attaque; // perso vie --
                             printf("la vie du perso est de : %d\n", persoprincipal->pv);
                             break;
                         case 2:
@@ -173,9 +176,9 @@ int postfight(t_perso* persoprincipal) {
                     break;
                 case 2:   // 2) Dans sa chambre
                     system("clear");
-                    lireLignes(nomFichier, 50, 68);
+                    lireLignes(nomFichier, 51, 51);
                     getchar();
-                    lireLignes(nomFichier, 70, 126);
+                    lireLignes(nomFichier, 71, 126);
                     getchar();
                     break;
                 case 3:  // 3) Dans la salle mystère
@@ -213,6 +216,10 @@ int postfight(t_perso* persoprincipal) {
             printf(" %s :\n vie : %d\n attaque : %d\n defense : %d\n mana : %d\n\n", persoprincipal->nom, persoprincipal->pv,persoprincipal->attaque, persoprincipal->defense, persoprincipal->magie);
             printf("Taper entrer pour revenir au menu");
             getchar();
+            break;
+
+        case 5:  // 3) Vous retournez dans les toilette 
+
             break;
         
         default:

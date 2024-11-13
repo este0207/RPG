@@ -6,6 +6,7 @@ Vous allez ou :
 2) Dans la salle de cours (5min)
 3) Vous retournez dans les toilette 
 4) Voir les stats
+5) Jouer au quidiche
 [----------------------------]
 !
 Vous rentrez dans la cour;
