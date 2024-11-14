@@ -10,7 +10,7 @@
 
 #define EVENT_LOOSE_PV '$'
 
-int quete2(char reponse[40]){
+int quete2(char reponse[40],t_perso* persoprincipal){
     int decision=0;
     int i=0;
     int k=0;
@@ -518,12 +518,9 @@ int quete2(char reponse[40]){
         
     
     printf("Fin du match. Score final :\nVous :%d | Equipe adverse :%d\n",scoreequipe,scoreequipeadverse);
-    
-    
-    
 
-
-
-    
     fclose(quete2);
+
+    persoprincipal->idquete=2;
+    
 }
