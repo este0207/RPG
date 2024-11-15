@@ -6,6 +6,7 @@
 
 #include "global.h"
 
+
 #define SAVE_NOT_EXIST 0
 #define SAVE_EXIST 1
 
@@ -38,5 +39,3 @@ int main() {
     save(name_save,&persoprincipal);
     return 0;
 }
-
-

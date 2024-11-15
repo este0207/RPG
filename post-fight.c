@@ -275,7 +275,6 @@ int postfight(t_perso* persoprincipal) {
                 
             }
             } 
-
             }
             }
             

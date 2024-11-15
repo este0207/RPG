@@ -20,10 +20,10 @@ int quete2(char reponse[40],t_perso* persoprincipal){
     char fichierchance[10];
     float fichierchancefloat=0;
 
-    FILE * quete2=fopen("quete2/quete2.txt","r");
-    fread(ligne,1,sizeof(ligne),quete2);
+    FILE * fd_quete2=fopen("quete2/quete2.txt","r");
+    fread(ligne,1,sizeof(ligne),fd_quete2);
 
-    char* intro = strtok(ligne,"#");
+    char* str_intro = strtok(ligne,"#");
     // for (int i = 0; i < strlen(intro); i++)
     // {
     //     if (intro[i]=='*')
@@ -83,7 +83,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
     
     // JE COMMENCE A PRINT ICI
 
-    printf("%s",intro);
+    printf("%s",str_intro);
     getchar();
 
     menuquete=&menuquete[1];
@@ -519,7 +519,8 @@ int quete2(char reponse[40],t_perso* persoprincipal){
     
     printf("Fin du match. Score final :\nVous :%d | Equipe adverse :%d\n",scoreequipe,scoreequipeadverse);
 
-    fclose(quete2);
+    fclose(fd_quete2);
 
     persoprincipal->idquete=2;
     
+}
