@@ -36,15 +36,6 @@ int main() {
     quete2(reponse,&persoprincipal);
     printf("Name save : %s\n",name_save);
     save(name_save,&persoprincipal);
-
-    
-    
-
-
-
-  
-
-
     return 0;
 }
 
