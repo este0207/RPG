@@ -8,7 +8,6 @@
 
 
 
-
 void lireLignes(char *nomFichier, int debut, int fin) {
     FILE *fichier = fopen(nomFichier, "r");  // Ouvrir le fichier en mode lecture
     if (fichier == NULL) {
@@ -111,11 +110,12 @@ int postfight(t_perso* persoprincipal) {
 
                     if (persoprincipal->pv <= 0){
                         printf("Vous n'avez plus de vie !\n");
-                        printf("Vous avez perdu !\n");
+                        continue;
                         break;
                     }
                     if (persoprincipal->magie <= 0){
                         printf("Vous n'avez plus de mana !\n");
+                        persoprincipal->magie = persoprincipal->magie + 10;
                         continue;
                         break;
                     }
@@ -182,7 +182,11 @@ int postfight(t_perso* persoprincipal) {
                     getchar();
                     break;
                 case 3:  // 3) Dans la salle mystère
-                    lireLignes(nomFichier, 30, 31);
+                    printf("Vous rentrez dans la salle mystere");
+                    printf("Vous trouver une porte mysterieuse ");
+                    printf("Vous l'ouvrez");
+                    printf("Vous trouver ");
+
                     break;
                 
                 default:
@@ -219,7 +223,6 @@ int postfight(t_perso* persoprincipal) {
             break;
 
         case 5:  // 3) Vous retournez dans les toilette 
-
             break;
         
         default:
