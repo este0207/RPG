@@ -17,11 +17,11 @@ int main() {
     system("clear");
     t_perso persoprincipal; 
     menudebut(&persoprincipal);
-    // intro(ligne);
+    intro(ligne);
     getnameandhouse(ligne,name,house);
     persoprincipal = attribution(name,house);
 
-    // intro2(ligne);
+    intro2(ligne);
     combat(&persoprincipal);
     postfight(&persoprincipal);
     quete2(house);

@@ -204,6 +204,7 @@ int getnameandhouse(char ligne[1000], char name[20],char maison[40]) {
 
     // Ferme le fichier
     fclose(getmaison);
+    printf("Taper ENTER pour continuer\n");
     getchar();
     
 

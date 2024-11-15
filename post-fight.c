@@ -7,7 +7,6 @@
 #define BUF_SIZE 255
 
 
-
 void lireLignes(char *nomFichier, int debut, int fin) {
     FILE *fichier = fopen(nomFichier, "r");  // Ouvrir le fichier en mode lecture
     if (fichier == NULL) {
@@ -88,6 +87,11 @@ int postfight(t_perso* persoprincipal) {
                 persoprincipal->defense = 50;
                 printf("PV : %d    Shield : %d", persoprincipal->pv, persoprincipal->defense);
                 getchar();
+
+                i=0;
+                while (i==0)
+                {
+                
                 system("clear");
                 // [----------------------------]
                 // 1) La forêt
@@ -119,6 +123,47 @@ int postfight(t_perso* persoprincipal) {
                         continue;
                         break;
                     }
+                    if (Drago.pv <= 0){
+                        system("clear");
+                        printf("Vous avez vaincu Drago Malefoy !\n");
+                        printf("+10 sur toutes les statistiques\n");
+                        printf("Taper entrer pour continuer");
+                        getchar();
+                        persoprincipal->magie = persoprincipal->magie + 10;
+                        persoprincipal->pv = persoprincipal->pv + 10;
+                        persoprincipal->defense = persoprincipal->defense + 10;
+                        persoprincipal->attaque = persoprincipal->attaque + 10;
+                        while (1)
+                        {
+                        
+                        system("clear");
+                        lireLignes(nomFichier, 62, 71);
+                        persoprincipal->pv = persoprincipal->pv + 50;
+
+                        fgets(choix2, sizeof(choix2), stdin);
+                        choix2[strlen(choix2)-1] = 0;
+                        a = atoi(choix2);
+
+                        switch (a)
+                        {
+                        case 1:
+                            system("clear");
+                            return 0;
+                            break;
+                        
+                         case 2:
+                            system("clear");
+                            printf(" %s :\n vie : %d\n attaque : %d\n defense : %d\n mana : %d\n\n", persoprincipal->nom, persoprincipal->pv,persoprincipal->attaque, persoprincipal->defense, persoprincipal->magie);
+                            printf("Taper entrer pour revenir au menu");
+                            getchar();
+                            continue;
+                        
+                        default:
+                            break;
+                        }
+
+                        }
+                    }
 
                     system("clear");
                     lireLignes(nomFichier, 32, 32);
@@ -133,19 +178,33 @@ int postfight(t_perso* persoprincipal) {
                     switch (a)
                     {
                     case 1:   // 1) Expectro Patronum(30) 
-                        lireLignes(nomFichier, 35, 36);
+                        if (persoprincipal->magie < 30){
+                            printf("Vous n'avez pas suffisamment de mana pour faire l'attaque Expectro Patronum\n");
+                            printf("Tapez Enter pour continuer\n");
+                            getchar();
+                            continue;
+                        }
+                        printf("Vous fais l'attaque Expectro Patronum\n");
                         persoprincipal->magie = persoprincipal->magie - 30;
+                        persoprincipal->magie = persoprincipal->magie + 10;
+                        Drago.pv -= persoprincipal->attaque * 2; // Drago vie --
                         break;
                     case 2:   // 2) Wingardium Leviosa(20)
-                        lireLignes(nomFichier, 37, 38);
+                    if (persoprincipal->magie < 20){
+                            printf("Vous n'avez pas suffisamment de mana pour faire l'attaque Expectro Patronum\n");
+                            printf("Tapez Enter pour continuer\n");
+                            getchar();
+                            continue;
+                        }
+                        printf("Vous fais l'attaque Wingardium Leviosa\n");
                         persoprincipal->magie = persoprincipal->magie - 20;
+                        persoprincipal->magie = persoprincipal->magie + 10;
                         Drago.pv -= persoprincipal->attaque; // Drago vie --
                         break;
                     case 3:   // 3) Coup fort
-                        lireLignes(nomFichier, 39, 40);
+                        printf("Vous fais l'attaque Coup fort\n");
                         persoprincipal->magie = persoprincipal->magie + 10;
                         Drago.pv -= persoprincipal->attaque; // Drago vie --
-                        continue;
                         break;
                     
                     default:
@@ -162,18 +221,30 @@ int postfight(t_perso* persoprincipal) {
                             printf("le boss fais une attack normale\n");
                            persoprincipal->pv -= Drago.attaque; // perso vie --
                             printf("la vie du perso est de : %d\n", persoprincipal->pv);
+                            sleep(2);
                             break;
                         case 2:
                             printf("le boss fais une grosse attack\n");
                             persoprincipal->pv -= Drago.attaque * 2; // perso vie --
                             printf("la vie du perso est de : %d\n", persoprincipal->pv);
+                            sleep(2);
                             break;
                         case 3:
                             printf("le boss rate sont attack\n");
                             printf("la vie du perso est de : %d\n", persoprincipal->pv);
+                            sleep(2);
                             break;
                         }
+
+                    if (persoprincipal->pv <= 0){
+                        printf("Vous avez perdu !\n");
+                        printf("Tapez Enter pour continuer\n");
+                        getchar();
+                        break;
+                    }
+                        }
                     break;
+
                 case 2:   // 2) Dans sa chambre
                     system("clear");
                     lireLignes(nomFichier, 56, 60);
@@ -195,6 +266,8 @@ int postfight(t_perso* persoprincipal) {
                 case 3:  // 3) Dans la salle mystère
                     system("clear");
                     lireLignes(nomFichier, 50, 54);
+                    printf("Taper Entrer pour continuer");
+                    getchar();
                     break;
                 
                 default:
@@ -202,8 +275,9 @@ int postfight(t_perso* persoprincipal) {
                 
             }
             } 
-            }
 
+            }
+            }
             
             else if (strcmp(choix2, "2") == 0 || strcasecmp(choix2, "non") == 0) {
 
@@ -213,13 +287,17 @@ int postfight(t_perso* persoprincipal) {
 
             break;
         case 2:  // Dans la salle de cours (5min)
+            system("clear");
             lireLignes(nomFichier, 39, 43);
             persoprincipal->magie = 100;
             sleep(5);
             lireLignes(nomFichier, 44, 44);
-            getchar();
             break;
         case 3:  // 3) Vous retournez dans les toilette 
+            system("clear");
+            lireLignes(nomFichier, 47, 48);
+            printf("Taper Entrer pour revenir au menu");
+            getchar();
 
             break;
 
@@ -229,9 +307,6 @@ int postfight(t_perso* persoprincipal) {
             printf("Taper entrer pour revenir au menu");
             getchar();
             break;
-
-        case 5:  // 3) Vous retournez dans les toilette 
-            break;
         
         default:
             lireLignes(nomFichier, 43, 44);
@@ -239,6 +314,8 @@ int postfight(t_perso* persoprincipal) {
         }
 
         }
+
+        printf("suite ?\n");
 
     return 0;
 }
