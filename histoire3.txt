@@ -47,5 +47,15 @@ Apprentissage Fini
 Vous retournez dans les toilette mais ca va pas ou quoi;
 Le garde vous vire des toilette et vous jette dehors.
 
+Vous rentrez dans la salle mystere");
+Vous trouver une porte mysterieuse
+Vous l'ouvrez...
+Vous trouver...
+rien!
 
 Vous Vous rendez dans la chambre de Drago Malefoy,
+Sur le lit, une potion d'attaque +20
+Vous la prenez ? :
+
+1) OUI      2) NON
+
