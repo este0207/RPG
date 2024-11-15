@@ -176,17 +176,25 @@ int postfight(t_perso* persoprincipal) {
                     break;
                 case 2:   // 2) Dans sa chambre
                     system("clear");
-                    lireLignes(nomFichier, 51, 51);
-                    getchar();
-                    lireLignes(nomFichier, 71, 126);
-                    getchar();
-                    break;
-                case 3:  // 3) Dans la salle mystère
-                    printf("Vous rentrez dans la salle mystere");
-                    printf("Vous trouver une porte mysterieuse ");
-                    printf("Vous l'ouvrez");
-                    printf("Vous trouver ");
+                    lireLignes(nomFichier, 56, 60);
 
+                    fgets(choix2, sizeof(choix2), stdin);
+                    choix2[strlen(choix2)-1] = 0;
+                    a = atoi(choix2);
+
+                    switch (a)
+                    {
+                        case 1: 
+                            printf("Vous prenez la potion !\n");
+                            persoprincipal->pv = persoprincipal->pv + 20;
+                            break;
+                        case 2: 
+                            printf("Vous n'avez rien a faire ici !\n");
+                            break;
+                        break;
+                case 3:  // 3) Dans la salle mystère
+                    system("clear");
+                    lireLignes(nomFichier, 50, 54);
                     break;
                 
                 default:
