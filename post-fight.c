@@ -203,6 +203,7 @@ int postfight(t_perso* persoprincipal) {
             }
             } 
             }
+            }
 
             
             else if (strcmp(choix2, "2") == 0 || strcasecmp(choix2, "non") == 0) {

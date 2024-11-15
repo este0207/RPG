@@ -6,6 +6,7 @@
 
 #include "global.h"
 
+
 #define SAVE_NOT_EXIST 0
 #define SAVE_EXIST 1
 
@@ -30,22 +31,12 @@ int main() {
         save(name_save,&persoprincipal);
     }
     
+    intro2(ligne);
+    combat(&persoprincipal);
+    postfight(&persoprincipal);
     quete2(reponse,&persoprincipal);
     printf("Name save : %s\n",name_save);
     save(name_save,&persoprincipal);
-
     
-    
-
-
-
-  
-    // intro2(ligne);
-    // combat(&persoprincipal);
-    // postfight(&persoprincipal);
-
-
     return 0;
 }
-
-
