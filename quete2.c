@@ -119,7 +119,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
         
     }
     printf("%s",lematchcommmence);
-    sleep(1.5);
+    usleep(150000);
     fflush(stdout);
     printf("%s",un);
     sleep(1);
@@ -523,4 +523,3 @@ int quete2(char reponse[40],t_perso* persoprincipal){
 
     persoprincipal->idquete=2;
     
-}

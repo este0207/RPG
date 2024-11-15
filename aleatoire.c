@@ -5,7 +5,7 @@
 #include <sys/random.h>
 
 
-int genEntropicSeed(){
+void genEntropicSeed(){
     int tab[255];
     getentropy(tab,sizeof(tab));
     int seed=0;

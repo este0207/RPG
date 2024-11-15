@@ -19,7 +19,6 @@ int main() {
     int b = 0;
 
 
-
     t_perso persoprincipal; 
     checksave= menudebut(name_save,&persoprincipal);
     
