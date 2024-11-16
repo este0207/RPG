@@ -19,7 +19,6 @@ int main() {
     int a = 0;
     int b = 0;
 
-
     t_perso persoprincipal; 
     checksave= menudebut(name_save,&persoprincipal);
     
@@ -30,7 +29,7 @@ int main() {
         persoprincipal = attribution(name,reponse);
         save(name_save,&persoprincipal);
     }
-    
+
     intro2(ligne);
     combat(&persoprincipal);
     postfight(&persoprincipal);
