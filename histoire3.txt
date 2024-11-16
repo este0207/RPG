@@ -1,0 +1,71 @@
+Vous sortez des toillet apres votres combats.
+Vous allez ou :
+
+[----------------------------]
+1) Dans la cour
+2) Dans la salle de cours (5min)
+3) Vous retournez dans les toilette 
+4) Voir les stats
+[----------------------------]
+!
+
+Vous rentrez dans la cour;
+Et vous faite la rencontre du jardinier,
+Il vous propose un quetes :
+
+Jadrinier : Bonjour , le vicieux Drago Malefoy ma voler mes mandragor, ces plante son si jolie OHLALALA.
+Jadrinier : Peut-tu m'aider a aller les chercher ?
+
+1) Vous aider le jardinier     2) Vous passer votre chemin 
+Vous : Bien sur j'y vais, ne vous inquietez pas .
+jardinier : OOH merci vous etes bien aimables mon garçon.
+jardinier : Tien prend cette potion de soin et cette potion de bouclier.
+[----------------------------]
+
+Vous allez cherchez Drago Malefoy dans :
+[----------------------------]
+1) La forêt
+2) Dans sa chambre
+3) Dans la salle mystère
+[----------------------------]
+
+Vous arrivez dans la forêt, Drago Malefoy vous attend de pied ferme.
+
+1) Expectro Patronum(30 mana)      2) Wingardium Leviosa(20 mana)      3) Coups fort (20)
+
+
+Vous : Désoler j'ai plus important a faire 
+Jadrinier : J'insiste SVP.
+
+Vous allez en salle de cours de magie;
+Vous passez 1h30 a apprendre 2 sort:
+1) Expectro Patronum(30)      2) Wingardium Leviosa(20)
+
+Apprentissage en cours ...
+Apprentissage Fini
+
+Vous retournez dans les toilette mais ca va pas ou quoi;
+Le garde vous vire des toilette et vous jette dehors.
+
+Vous rentrez dans la salle mystere");
+Vous trouver une porte mysterieuse
+Vous l'ouvrez...
+Vous trouver...
+rien!
+
+Vous Vous rendez dans la chambre de Drago Malefoy,
+Sur le lit, une potion d'attaque +20
+Vous la prenez ? :
+
+1) OUI      2) NON
+
+Apres votre combats avec Drago Malefoy, Vous rendez ces plantes au jardinier.
+Pour vous remercier, il vous donne +50 de pv.
+Apres avoir parler au Jardinier, Vous entendez les trompettes retentir.
+C'est le match de quidiche qui commence.
+Aller Jouer avec eux.
+
+[----------------------------]
+1) Jouer au quidiche
+2) Voir les stats
+[----------------------------]

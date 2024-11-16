@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 typedef struct perso 
 {
     char nom [20];
@@ -10,10 +11,10 @@ typedef struct perso
     int defense;
     int magie;
     int pv;
+    int idquete;
 }t_perso;
 
 t_perso attribution(char name[20],char maison[40]){
-    
     t_perso persoprincipal;
     strcpy(persoprincipal.nom,name);
     strcpy(persoprincipal.maison,maison);
@@ -41,6 +42,7 @@ t_perso attribution(char name[20],char maison[40]){
         fscanf(poufsoufle,"Attaque : %d Defense : %d Mana : %d PV : %d",&persoprincipal.attaque,&persoprincipal.defense,&persoprincipal.magie,&persoprincipal.pv);
         fclose(poufsoufle);
     }
+    persoprincipal.idquete=0;
     
     return persoprincipal;
 }

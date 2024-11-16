@@ -5,6 +5,12 @@
         "text_encoding": "c",
         "time.h": "c",
         "stdlib.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "unistd.h": "c",
+        "attribution.c": "cpp",
+        "histoire.c": "cpp",
+        "menudebut.c": "cpp",
+        "quete2.c": "cpp",
+        "global.h": "c"
     }
 }
