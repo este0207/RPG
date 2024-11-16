@@ -38,6 +38,7 @@ int postfight(t_perso* persoprincipal) {
     char *nomFichier = "histoire3.txt";  // Nom du fichier à lire
     int ligneDebut = 0;
     int ligneFin = 0;
+    int changement = 0;
 
     t_perso Drago;
     Drago.attaque = 10;
@@ -138,7 +139,11 @@ int postfight(t_perso* persoprincipal) {
                         
                         system("clear");
                         lireLignes(nomFichier, 62, 71);
+                        if (changement < 1)
+                        {
                         persoprincipal->pv = persoprincipal->pv + 50;
+                        changement++;
+                        }
 
                         fgets(choix2, sizeof(choix2), stdin);
                         choix2[strlen(choix2)-1] = 0;
@@ -257,7 +262,7 @@ int postfight(t_perso* persoprincipal) {
                     {
                         case 1: 
                             printf("Vous prenez la potion !\n");
-                            persoprincipal->pv = persoprincipal->pv + 20;
+                            persoprincipal->attaque = persoprincipal->attaque + 20;
                             break;
                         case 2: 
                             printf("Vous n'avez rien a faire ici !\n");
