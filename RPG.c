@@ -19,7 +19,6 @@ int main() {
     int a = 0;
     int b = 0;
 
-
     t_perso persoprincipal; 
     checksave= menudebut(name_save,&persoprincipal);
     
@@ -31,10 +30,11 @@ int main() {
         save(name_save,&persoprincipal);
     }
     
-    // intro2(ligne);
-    // combat(&persoprincipal);
-    // save(name_save,&persoprincipal);
-    // postfight(&persoprincipal);
+
+    intro2(ligne);
+    combat(&persoprincipal);
+    save(name_save,&persoprincipal);
+    postfight(&persoprincipal);
     quete2(reponse,&persoprincipal);
     save(name_save,&persoprincipal);
     return 0;
