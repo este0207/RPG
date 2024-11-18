@@ -84,6 +84,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
     // JE COMMENCE A PRINT ICI
 
     printf("%s",str_intro);
+    printf("Appuyez sur ENTER pour continuer\n");
     getchar();
 
     menuquete=&menuquete[1];
@@ -136,6 +137,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
 
     system("clear");
     printf("%s\n",matchlancer);
+    printf("Appuyez sur ENTER pour continuer\n");
     getchar();
     
     float random=0;
@@ -179,7 +181,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
             fclose(chance);
             fichierchancefloat=atof(fichierchance);
             random=aleatoire(0.0,1.0);
-            printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+            // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
             
             if (random<fichierchancefloat)
             {
@@ -191,7 +193,8 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                 printf("Raté !\n");
                 random=aleatoire(0.0,1.0);
                 decision=pertedeballe(random);
-                printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                printf("Appuyez sur ENTER pour continuer\n");
                 getchar();
                 if (decision==2)
                 {
@@ -212,7 +215,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
             fichierchancefloat=atof(fichierchance);
             // genEntropicSeed();
             random=aleatoire(0.0,1.0);
-            printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+            // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
             
             if (random<fichierchancefloat)
             {
@@ -248,7 +251,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                     fichierchancefloat=atof(fichierchance);
                     // genEntropicSeed();
                     random=aleatoire(0.0,1.0);
-                    printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                    // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
                     if (random<fichierchancefloat)
                     {
                         printf("REUSSI ! Vous avez gagné le match :\n");
@@ -257,7 +260,8 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                     else{
                         printf("Raté !\n");
                         decision=pertedeballe(random);
-                        printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        printf("Appuyez sur ENTER pour continuer\n");
                         getchar();
                         if (decision==2)
                         {
@@ -274,7 +278,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                     fichierchancefloat=atof(fichierchance);
                     // genEntropicSeed();
                     random=aleatoire(0.0,1.0);
-                    printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                    // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
 
                     if (random<fichierchancefloat)
                     {
@@ -287,7 +291,8 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                         printf("Raté !\n");
                         random=aleatoire(0.0,1.0);
                         decision=pertedeballe(random);
-                        printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        printf("Appuyez sur ENTER pour continuer\n");
                         getchar();
                         if (decision==2)
                         {
@@ -319,7 +324,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
             fichierchancefloat=atof(fichierchance);
             // genEntropicSeed();
             random=aleatoire(0.0,1.0);
-            printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+            // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
 
             if (random<fichierchancefloat)
             {
@@ -350,7 +355,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                     fichierchancefloat=atof(fichierchance);
                     // genEntropicSeed();
                     random=aleatoire(0.0,1.0);
-                    printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                    // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
                     if (random<fichierchancefloat)
                     {
                         printf("Reussi ! Votre équipe gagne le match !\n");
@@ -359,7 +364,8 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                     else{
                         printf("Raté !\n");
                         decision=pertedeballe(random);
-                        printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        printf("Appuyez sur ENTER pour continuer\n");
                         getchar();
                         if (decision==2)
                         {
@@ -374,7 +380,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                     fichierchancefloat=atof(fichierchance);
                     // genEntropicSeed();
                     random=aleatoire(0.0,1.0);
-                    printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                    // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
                     if (random<fichierchancefloat)
                     {
                         printf("Réussi !\n");
@@ -385,13 +391,16 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                         }
                         fclose(reussite);
                         scoreequipe++;
+                        printf("Appuyez sur ENTER pour continuer\n");
                         getchar();
+
                     }
                     else{
                         printf("Raté !\n");
                         random=aleatoire(0.0,1.0);
                         decision=pertedeballe(random);
-                        printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                        printf("Appuyez sur ENTER pour continuer\n");
                         getchar();
                         if (decision==2)
                         {
@@ -407,7 +416,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                     fichierchancefloat=atof(fichierchance);
                     // genEntropicSeed();
                     random=aleatoire(0.0,1.0);
-                    printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                    // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
                     if (random<fichierchancefloat)
                     {
                         printf("Reussi !\n");
@@ -435,7 +444,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                             fichierchancefloat=atof(fichierchance);
                             // genEntropicSeed();
                             random=aleatoire(0.0,1.0);
-                            printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                            // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
                             if (random<fichierchancefloat)
                             {
                                 printf("Reussi ! Vous gagnez la partie\n");
@@ -444,6 +453,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                                 printf("Raté !\n");
                                 random=aleatoire(0.0,1.0);
                                 decision=pertedeballe(random);
+                                printf("Appuyez sur ENTER pour continuer\n");
                                 getchar();
                                 if (decision==2)
                                 {
@@ -459,7 +469,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                             fichierchancefloat=atof(fichierchance);
                             // genEntropicSeed();
                             random=aleatoire(0.0,1.0);
-                            printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                            // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
                             if (random<fichierchancefloat)
                             {
                                 printf("Réussi !\n");
@@ -477,6 +487,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                                 printf("Raté !\n");
                                 random=aleatoire(0.0,1.0);
                                 decision=pertedeballe(random);
+                                printf("Appuyez sur ENTER pour continuer\n");
                                 getchar();
                                 if (decision==2)
                                 {
@@ -490,6 +501,7 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                         printf("Raté !\n");
                         random=aleatoire(0.0,1.0);
                         decision=pertedeballe(random);
+                        printf("Appuyez sur ENTER pour continuer\n");
                         getchar();
                         if (decision==2)
                         {
@@ -503,7 +515,8 @@ int quete2(char reponse[40],t_perso* persoprincipal){
                 printf("Raté !\n");
                 random=aleatoire(0.0,1.0);
                 decision=pertedeballe(random);
-                printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                // printf("random : %f et la chance : %f\n",random,fichierchancefloat);
+                printf("Appuyez sur ENTER pour continuer\n");
                 getchar();
                 if (decision==2)
                 {
@@ -522,5 +535,6 @@ int quete2(char reponse[40],t_perso* persoprincipal){
     fclose(fd_quete2);
 
     persoprincipal->idquete=2;
+    return 2;
     
 }
