@@ -6,7 +6,7 @@
 
 
 
-void combat(t_perso* persoprincipal) {
+int combat(t_perso* persoprincipal) {
     char ligne[1000];
     int a = 0;
     char choix2[3];
@@ -88,5 +88,7 @@ void combat(t_perso* persoprincipal) {
         sleep(2);
 
     }
+    persoprincipal->idquete=1;
+    return 1;
 }
 

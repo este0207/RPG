@@ -20,8 +20,9 @@ int pertedeballe(float random){
         FILE * pertedeballe=fopen("quete2/pertedeballepasbut","r");
         while(fgets(ligne,1000,pertedeballe)!=NULL){
             ligne[strlen(ligne)-1]=0;
-            printf("%s",ligne);
-            getchar();
+            printf("%s\n",ligne);
+            sleep(1);
+            fflush(stdout);
         }
         fclose(pertedeballe);
         // printf("random : %f chance : %f\n",random,chance);
@@ -32,8 +33,9 @@ int pertedeballe(float random){
         FILE * pertedeballe=fopen("quete2/pertedeballebut","r");
         while(fgets(ligne,1000,pertedeballe)!=NULL){
             ligne[strlen(ligne)-1]=0;
-            printf("%s",ligne);
-            getchar();
+            printf("%s\n",ligne);
+            sleep(1);
+            fflush(stdout);
         }
         fclose(pertedeballe);
         // printf("random : %f chance : %f\n",random,chance);

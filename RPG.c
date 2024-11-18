@@ -31,11 +31,11 @@ int main() {
         save(name_save,&persoprincipal);
     }
     
-    intro2(ligne);
-    combat(&persoprincipal);
-    postfight(&persoprincipal);
+    // intro2(ligne);
+    // combat(&persoprincipal);
+    // save(name_save,&persoprincipal);
+    // postfight(&persoprincipal);
     quete2(reponse,&persoprincipal);
-    printf("Name save : %s\n",name_save);
     save(name_save,&persoprincipal);
     return 0;
 }
